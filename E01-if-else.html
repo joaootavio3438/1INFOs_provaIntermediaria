@@ -9,11 +9,21 @@
     */
 
     //Entrada
-
+    let ficaraBicicleta = parseInt(prompt("Informe quantos dias ele ficará com a bicicleta:"));
+    let aluguelUmDia = 15;
+    let precoFinal = 0;
 
     //Processamento
-
+    if(ficaraBicicleta <= 7){
+        document.write(`ficará ${ficaraBicicleta} dias com a bicicleta`);
+        document.write(`Preço final ${(aluguelUmDia * ficaraBicicleta)} `);
+    }
+    else {
+        const desconto = (aluguelUmDia * ficaraBicicleta) * 0.2
+        document.write(`Ficará ${ficaraBicicleta} dias com a bicicleta<br/>`);
+        document.write(`Desconto R$ ${desconto.toFixed(2)}<br/> Preço final R$ ${((aluguelUmDia * ficaraBicicleta)- desconto).toFixed(2)} `);
+    }
 
     //Saída
-    
+    //alert("QUALquer texto")
 </script>
